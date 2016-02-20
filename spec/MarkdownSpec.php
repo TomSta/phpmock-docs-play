@@ -31,6 +31,7 @@ class MarkdownSpec extends ObjectBehavior
 
     }
 
+<<<<<<< HEAD
     function it_outputs_converted_text_mock_check( $writer ) {
       $writer->writeText( $this->textInDiv )
                 ->shouldBeCalled();
@@ -58,4 +59,5 @@ class MarkdownSpec extends ObjectBehavior
   function letGo() {
     //this will run after each spec, similar to afterEach in Jasmine
   }
+
 }
