@@ -5,7 +5,7 @@ module.exports = function(grunt) {
 	 shell: {
 	 	phpspec: {
 			command:
-                "bin/phpspec run"
+                "bin/phpspec --ansi run"
 			}
 	 },
 	 watch: {
