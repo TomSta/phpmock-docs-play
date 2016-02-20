@@ -1,5 +1,6 @@
 <?php
 use Markdown\Reader;
+use Markdown\Writer;
 
 class Markdown
 {
@@ -11,5 +12,10 @@ class Markdown
     public function toHtmlFromReader( Reader $reader ) :string
     {
         return $this->toHtml( $reader->getMarkDown() );
+    }
+
+    public function outputHtml( string $text, Writer $writer)
+    {
+      $writer->writeText( $text );
     }
 }
