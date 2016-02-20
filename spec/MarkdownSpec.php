@@ -11,4 +11,10 @@ class MarkdownSpec extends ObjectBehavior
     {
         $this->shouldHaveType('Markdown');
     }
+
+    function it_converts_plain_text_to_html_divs()
+    {
+      $this->toHtml("Hello world from PHPSpec")
+              ->shouldReturn("<div>Hello world from PHPSpec</div>");
+    }
 }
