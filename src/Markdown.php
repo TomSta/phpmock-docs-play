@@ -4,6 +4,12 @@ use Markdown\Writer;
 
 class Markdown
 {
+  private $writer;
+
+  public function __construct( Writer $writer )
+  {
+    $this->writer = $writer;
+  }
   public function toHtml( string $string ) :string
   {
     return "<div>".$string."</div>";
@@ -14,8 +20,8 @@ class Markdown
         return $this->toHtml( $reader->getMarkDown() );
     }
 
-    public function outputHtml( string $text, Writer $writer)
+    public function outputHtml( string $text)
     {
-      $writer->writeText( $text );
+      $this->writer->writeText( $text );
     }
 }
